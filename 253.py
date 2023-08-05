@@ -6,7 +6,6 @@ def add_contact(name1, phone1, email1, address1):
         "email": email1,
         "address": address1
     })
-    print("Contact created successfully!\n")
 
 
 def edit_contact(new_name, new_phone_num, new_email_address, new_address_num):
@@ -24,7 +23,6 @@ def delete_contact(del_name):
     for contact in contacts:
         if contact["name"] == del_name:
             contacts.remove(contact)
-            print("Contact Deleted successfully!")
             break
 
 
@@ -40,26 +38,21 @@ def list_contacts():
 contacts = []
 
 while True:
-    print("What would you like to do?\n")
-    print("1. Add a contact\n")
-    print("2. Edit a contact\n")
-    print("3. Delete a contact\n")
-    print("4. List contacts\n")
-    print("5. Quit\n")
+    print("What would you like to do?")
+    print("1. Add a contact")
+    print("2. Edit a contact")
+    print("3. Delete a contact")
+    print("4. List contacts")
+    print("5. Quit")
 
-    choice = input("Enter your choice: \n")
+    choice = input("Enter your choice: ")
 
     if choice == "1":
-        name = input("Enter the contact name: \n")
-        phone = input("Enter the contact phone number: \n")
-        email = input("Enter the contact email address: \n")
-        address = input("Enter the contact address: \n")
+        name = input("Enter the contact name: ")
+        phone = input("Enter the contact phone number: ")
+        email = input("Enter the contact email address: ")
+        address = input("Enter the contact address: ")
         add_contact(name, phone, email, address)
-        # The try: block converts the phone number to an integer.
-        try:
-            int(phone)
-        except ValueError:
-            print("Invalid phone number")
 
     elif choice == "2":
         name = input("Enter the contact name to edit: ")
