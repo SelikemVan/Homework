@@ -1,7 +1,7 @@
 def add_contact(name1, phone1, email1, address1):
     """Adds a new contact to the contact book."""
     contacts.append({
-        "Name": name1,
+        "name": name1,
         "phone": phone1,
         "email": email1,
         "address": address1
@@ -38,20 +38,20 @@ def list_contacts():
 contacts = []
 
 while True:
-    print("What would you like to do?")
-    print("1. Add a contact")
-    print("2. Edit a contact")
-    print("3. Delete a contact")
-    print("4. List contacts")
-    print("5. Quit")
+    print("What would you like to do?\n")
+    print("1. Add a contact\n")
+    print("2. Edit a contact\n")
+    print("3. Delete a contact\n")
+    print("4. List contacts\n")
+    print("5. Quit\n")
 
-    choice = input("Enter your choice: ")
+    choice = input("Enter your choice: \n")
 
     if choice == "1":
-        name = input("Enter the contact name: ")
-        phone = input("Enter the contact phone number: ")
-        email = input("Enter the contact email address: ")
-        address = input("Enter the contact address: ")
+        name = input("Enter the contact name: \n")
+        phone = input("Enter the contact phone number: \n")
+        email = input("Enter the contact email address: \n")
+        address = input("Enter the contact address: \n")
         add_contact(name, phone, email, address)
 
     elif choice == "2":
